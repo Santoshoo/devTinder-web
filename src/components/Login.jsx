@@ -7,22 +7,30 @@ import { useNavigate } from 'react-router-dom';
 import { BASE_URL } from '../utils/constants';
 
 const Login = () => {
-    const [emailId, setEmailId] = useState("elon3@gmail.com");
-    const [password, setPassword] = useState("Elon@124");
-const dipatch = useDispatch();
+    const [emailId, setEmailId] = useState("");
+    const [password, setPassword] = useState("");
+const dispatch = useDispatch();
 const navigate = useNavigate();
     const handleLogin = async () => {
       try{
-        const res= await axios.post(BASE_URL +"/login",{
-          emailId,password
-        },{
-          withCredentials:true
-        })
-        console.log(res.data);
-dipatch(addUser(res.data));
+        const res = await axios.post(
+          BASE_URL+"/login",
+         
+          {
+        
+            emailId,
+            password,
+          },
+          {
+            withCredentials: true,
+          }
+        );
+        // console.log(res);
+        // console.log(res.user);
+dispatch(addUser(res.data));
 navigate("/")
       }catch(err){
-        console.log(err)
+        console.error(err)
       }
     };
 
@@ -36,7 +44,7 @@ navigate("/")
           <h2 className="card-title justify-center">Login</h2>
           <div>
             <fieldset className="fieldset justify-center">
-              <legend className="fieldset-legend ">Email Id</legend>
+              <legend className="fieldset-legend ">Email Id:{emailId}</legend>
               <input type="text"
               value={emailId} 
               onChange={(e)=> setEmailId(e.target.value)} className="input" placeholder="" />
