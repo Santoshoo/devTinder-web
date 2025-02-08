@@ -7,12 +7,12 @@ console.log(users);
   return (
     <div className="card bg-base-300 w-80  shadow-xl">
       <figure>
-        <img className="h-50" src={users?.photoUrl} alt="user" />
+        <img className="h-90" src={users?.photoUrl} alt="user" />
       </figure>
 
       <div className="card-body">
         <h2 className="card-title">{firstName + " " + lastName}</h2>
-        {age && gender && <p>{age + " " + gender}</p>}
+        {age && gender && <p>{age + ", " + gender}</p>}
 
         <p>{about}</p>
         <div className="card-actions justify-end justify-evenly">

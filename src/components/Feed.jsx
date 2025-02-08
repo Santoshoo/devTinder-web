@@ -24,7 +24,7 @@ const Feed = () => {
   };
   useEffect(() => {
     getFeed();
-  }, [dispatch,feed]);
+  }, []);
   return ( feed &&
     <div className="flex justify-center my-8">
     
