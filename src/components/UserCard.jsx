@@ -2,12 +2,12 @@ import React from 'react'
 
 const UserCard = ({users}) => {
 
-console.log(users);
+//console.log(users);
     const { firstName, lastName, photoUrl, skills ,age,gender,about} = users;
   return (
     <div className="card bg-base-300 w-80  shadow-xl">
       <figure>
-        <img className="h-90" src={users?.photoUrl} alt="user" />
+        <img className="h-50" src={users?.photoUrl} alt="user" />
       </figure>
 
       <div className="card-body">

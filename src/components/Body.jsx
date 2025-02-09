@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+
+
 import NavBar from "./NavBar";
 import { Outlet } from "react-router-dom";
 import Footer from "./Footer";
@@ -43,3 +45,13 @@ const userData=useSelector((store)=>store.user)
 };
 
 export default Body;
+
+
+
+
+
+
+
+
+
+
