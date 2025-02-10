@@ -8,10 +8,14 @@ const feedSlice = createSlice({
     addFeed: (state, action) => {
       return action.payload;
     },
+    // removeUserFromFeed: (state, action) => {
+    //   const newFeed = state.filter((user) => user._id !== action.payload);
+    //   return newFeed;
+    // },
     removeUserFromFeed: (state, action) => {
-      const newFeed = state.filter((user) => user._id !== action.payload);
-      return newFeed;
-    },
+  state.users = state.users.filter((user) => user._id !== action.payload);
+},
+
   },
 });
 
