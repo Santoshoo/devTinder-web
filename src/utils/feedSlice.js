@@ -1,5 +1,30 @@
-import { createSlice } from "@reduxjs/toolkit";
+// import { createSlice } from "@reduxjs/toolkit";
  
+
+// const feedSlice = createSlice({
+//   name: "feed",
+//   initialState: null,
+//   reducers: {
+//     addFeed: (state, action) => {
+//       return action.payload;
+//     },
+//     // removeUserFromFeed: (state, action) => {
+//     //   const newFeed = state.filter((user) => user._id !== action.payload);
+//     //   return newFeed;
+//     // },
+//     removeUserFromFeed: (state, action) => {
+//   state.users = state.users.filter((user) => user._id !== action.payload);
+// },
+
+//   },
+// });
+
+// export const  {addFeed,removeUserFromFeed}=feedSlice.actions
+
+// export default feedSlice.reducer
+
+
+import { createSlice } from "@reduxjs/toolkit";
 
 const feedSlice = createSlice({
   name: "feed",
@@ -8,17 +33,12 @@ const feedSlice = createSlice({
     addFeed: (state, action) => {
       return action.payload;
     },
-    // removeUserFromFeed: (state, action) => {
-    //   const newFeed = state.filter((user) => user._id !== action.payload);
-    //   return newFeed;
-    // },
     removeUserFromFeed: (state, action) => {
-  state.users = state.users.filter((user) => user._id !== action.payload);
-},
-
+      const newFeed = state.filter((user) => user._id !== action.payload);
+      return newFeed;
+    },
   },
 });
 
-export const  {addFeed,removeUserFromFeed}=feedSlice.actions
-
-export default feedSlice.reducer
+export const { addFeed, removeUserFromFeed } = feedSlice.actions;
+export default feedSlice.reducer;
