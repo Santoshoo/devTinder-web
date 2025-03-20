@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from "axios";
 import { BASE_URL } from "../utils/constants";
-import { use } from 'react';
+import { useState } from 'react';
 
 const Premium = () => {
 const [isUserPremium, setIsUserPremium] = useState(false);
