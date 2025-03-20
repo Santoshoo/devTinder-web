@@ -29,7 +29,7 @@ const EditProfile = ({ user }) => {
           lastName,
           photoUrl,
           age,
-          gender,
+          
           about,
         },
         { withCredentials: true }
